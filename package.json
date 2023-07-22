@@ -1,0 +1,25 @@
+{
+  "name": "csbasic",
+  "version": "1.0.0",
+  "description": "## HTTP 相关",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cd app/ && nodemon ./index.ts 1234"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangyq1996/CSBasic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangyq1996/CSBasic/issues"
+  },
+  "homepage": "https://github.com/wangyq1996/CSBasic#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
