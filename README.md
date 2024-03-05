@@ -1,4 +1,57 @@
-# CSBasic
+# CS Basic
+
+## JS Basic
+
+### Scope
+
+3 types of JS scope
+
+1. Global Scope
+
+- Declared globally (outside any function)
+- All scripts and functions on a web page can access it.
+
+2. Function Scope
+
+- Each function create a function scope
+- Variables defined inside a function are not accessible (visible) from outside the function.
+
+3. Block Scope
+
+- Only after ES6
+- Variables declared inside a `{}` block cannot be accessed from outside the block
+
+### var, let & const
+
+- const:
+  - After ES6
+  - Block Scope
+  - Cannot be modified
+- let:
+  - Same with const, but can be modified
+  - Cannot be re-declared
+- var:
+  - Global / Function Scope
+  - Can be updated & re-declared
+  - Hoisting of var
+    ```
+      console.log (greeter);
+      var greeter = "say hello"
+    ```
+    equals to
+    ```
+      var greeter; // Initialized as undefined
+      console.log(greeter); // greeter is undefined
+      greeter = "say hello"
+    ```
+
+### this
+
+“this”：对包含当前方法对象的引用，也就是 谁 运行的这个方法（call-site）
+
+#### JS 运行流程
+
+1.
 
 ## HTTP
 
@@ -33,23 +86,28 @@ _跨域访问控制是浏览器行为，通过代理 / 工具即可绕过_
 - `Access-Control-Max-Age`：最大的浏览器缓存时间，单位为`s`
 
 ### Cookie
+
 Cookie 是**服务器**发送到**浏览器**并在本地保存的一小块数据
 
 基础用法：
 `Set-Cookie: <cookie-name>=<cookie-value>`
 
 ### Web Storage
+
 两种机制
+
 - sessionStorage：
-   - 会话级别，tab 关闭即销毁（有些保存会话的浏览器，重新打开后会话仍存在）
-   - 容量比 cookie 大（5MB）
+  - 会话级别，tab 关闭即销毁（有些保存会话的浏览器，重新打开后会话仍存在）
+  - 容量比 cookie 大（5MB）
 - localStorage：
-   - 无过期时间，仅通过 js 获取 / 清除
-   - 容量为 Browser cache / Locally Stored Data 中的较大值,可认为无上限
+  - 无过期时间，仅通过 js 获取 / 清除
+  - 容量为 Browser cache / Locally Stored Data 中的较大值,可认为无上限
 
 ### HTTP 缓存机制
-*缓存仅针对静态资源，因为相比于接口数据，静态资源大得多且不易更改*
->[强缓存 & 协商缓存](https://zhuanlan.zhihu.com/p/484262036#:~:text=%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%20%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8,%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%B0%E8%BF%94%E5%9B%9E%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%82)
+
+_缓存仅针对静态资源，因为相比于接口数据，静态资源大得多且不易更改_
+
+> [强缓存 & 协商缓存](https://zhuanlan.zhihu.com/p/484262036#:~:text=%E5%BC%BA%E5%88%B6%E7%BC%93%E5%AD%98%20%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8,%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%B0%E8%BF%94%E5%9B%9E%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%82)
 
 ![Alt text](image.png)
 
@@ -62,3 +120,7 @@ Cookie 是**服务器**发送到**浏览器**并在本地保存的一小块数�
 | audio       | 表明是某种音频文件                                                      | `audio/midi`, `vaudio/mpeg`, `audio/webm`, `audio/ogg`, `audio/wav `                                                                            |
 | video       | 表明是某种视频文件                                                      | `video/webm`, `video/ogg`                                                                                                                       |
 | application | 表明是某种二进制数据                                                    | `application/octet-stream`, `application/pkcs12`, `application/vnd.mspowerpoint`, `application/xhtml+xml`, `application/xml`, `application/pdf` |
+
+```
+
+```

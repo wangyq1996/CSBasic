@@ -1,3 +1,10 @@
-const { blue } = require("colorette");
-
-console.log(blue('123'))
+function abc() {
+  var a = true;
+  if (a) {
+    const  z = 5;
+  } else {
+    const  z = 6;
+  }
+  console.log('z = ', z);
+}
+abc();

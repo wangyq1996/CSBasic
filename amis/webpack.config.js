@@ -53,7 +53,6 @@ module.exports = {
      */
     liveReload: true,
   },
-  devtool: 'source-map',
   resolve: {
     /** "extensions"
      * If multiple files share the same name but have different extensions, webpack will
@@ -78,6 +77,23 @@ module.exports = {
       {
         test: /\.css$/i, //kind of file extension this rule should look for and apply in test
         use: ['style-loader', 'css-loader'], //loader which we are going to use
+      },
+      {
+        test: /\.less$/i,
+        use: [
+          // compiles Less to CSS
+          'style-loader',
+          'css-loader',
+          'less-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
     ],
   },
